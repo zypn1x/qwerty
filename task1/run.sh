@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /bin/bashh
 
 while [ -n "$1" ]
 do
