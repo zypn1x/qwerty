@@ -8,7 +8,7 @@ add_executable(C ${CMAKE_CURRENT_SOURCE_DIR}/C/main.cpp)
 
 add_subdirectory(B)
 
-iset(EXECUTABLE_OUTPUT_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set(EXECUTABLE_OUTPUT_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
 include_directories(
     PUBLIC
