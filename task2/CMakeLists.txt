@@ -17,7 +17,4 @@ add_subdirectory(B)
 set(EXECUTABLE_OUTPUT_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
 target_link_libraries(C  add_new_lib)
-target_link_libraries( CTest ${GTEST_LIBRARIES} Threads::Threads add_new_lib)
-
-
 
