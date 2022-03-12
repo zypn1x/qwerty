@@ -1,8 +1,6 @@
-##ifndef LIB_H
+#ifndef LIB_H
 #define LIB_H
 
-int half (int value) {
-	return(value / 2);
-}
+int half (int);
 
 #endif

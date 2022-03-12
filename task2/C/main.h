@@ -6,4 +6,3 @@ void time () {
 	std::cout << "what time is it?";
 }
 
-#endif
