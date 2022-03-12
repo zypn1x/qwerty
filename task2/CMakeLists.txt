@@ -8,7 +8,7 @@ include_directories(
     ${GTEST_INCLUDE_DIRS}
 )
 
-add_custom_command(OUTPUT index.h COMMAND python3 "${CMAKE_CURRENT_SOURCE_DIR}/A/preparing.py")
+execute_process(COMMAND python3 preparing.py WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/A)
 
 add_executable(C ${CMAKE_CURRENT_SOURCE_DIR}/C/main.cpp)
 
