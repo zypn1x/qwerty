@@ -11,13 +11,12 @@ include_directories(
 
 execute_process(COMMAND python3 preparing.py WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/A)
 
-set(SOURCE "./C/main.cpp")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set(SOURCE "./C/main.cpp")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
-add_executable(C ${CMAKE_CURRENT_SOURCE_DIR}/C/main.cpp)
 add_subdirectory(B)
-
+add_executable(C ${CMAKE_CURRENT_SOURCE_DIR}/C/main.cpp)
 
 target_link_libraries(C  add_new_lib)
 
