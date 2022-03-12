@@ -8,7 +8,7 @@ include_directories(
     ${GTEST_INCLUDE_DIRS}
 )
 
-execute_process(COMMAND python3 preparing.py WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/A)
+add_custom_command( OUTPUT index.h COMMAND python3 "${CMAKE_CURRENT_SOURCE_DIR/A/preparing.py" )
 
 add_executable(C ${CMAKE_CURRENT_SOURCE_DIR}/C/main.cpp)
 
@@ -17,7 +17,7 @@ add_subdirectory(B)
 set(EXECUTABLE_OUTPUT_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
 target_link_libraries(C  add_new_lib)
-target_link_libraries( CTest ${GTEST_LIBRARIES} Threads::Threads new_lib)
+target_link_libraries( CTest ${GTEST_LIBRARIES} Threads::Threads add_new_lib)
 
 
 
