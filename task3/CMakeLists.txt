@@ -13,9 +13,9 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/lib)
 
 add_subdirectory(src)
 add_executable(Main main.cpp)
-add_executable(MainLib main_lib.cpp)
+add_executable(Mainlib main_lib.cpp)
 
-target_link_libraries(MainLib buffer)
+target_link_libraries(Mainlib buffer)
 
 install(TARGETS Mainlib Main RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 install(TARGETS Mainlib Main LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
