@@ -15,7 +15,7 @@ add_subdirectory(src)
 add_executable(Main main.cpp)
 add_executable(MainLib main_lib.cpp)
 
-target_link_libraries(Mainlib buffer)
+target_link_libraries(MainLib buffer)
 
 install(TARGETS MainLib Main RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 install(TARGETS MainLib Main LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
