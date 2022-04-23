@@ -10,6 +10,7 @@ WORKDIR ./application
 EXPOSE 8898
 
 RUN useradd -ms /bin/bash tp2022user
+
 RUN cd /application
 RUN mkdir build && cd build && cmake .. && make
 RUN pip install flask argparse
