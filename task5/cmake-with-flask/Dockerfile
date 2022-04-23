@@ -9,14 +9,9 @@ COPY . ./application
 WORKDIR ./application
 EXPOSE 8898
 
-RUN cd /application
-
 RUN useradd -ms /bin/bash tp2022user
-
-RUN mkdir build
-RUN cd build
-RUN cmake .. 
-RUN make
+RUN cd /application
+RUN mkdir build && cd build && cmake .. && make
 RUN pip install flask argparse
 
 USER tp2022user
