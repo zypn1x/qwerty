@@ -4,14 +4,15 @@ FROM python:3
 RUN apt-get update
 RUN apt-get install -y python3-pip python-dev cmake make build-essential
 
-RUN useradd -ms /bin/bash tp2022user
-
 RUN mkdir -p ./application
 COPY . ./application
 WORKDIR ./application
 EXPOSE 8898
 
 RUN cd /application
+
+RUN useradd -ms /bin/bash tp2022user
+
 RUN mkdir build
 RUN cd build
 RUN cmake .. 
