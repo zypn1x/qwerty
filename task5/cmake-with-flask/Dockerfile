@@ -12,9 +12,7 @@ EXPOSE 8898
 RUN useradd -ms /bin/bash tp2022user
 
 RUN cd /application
-RUN mkdir build
-WORKDIR /build
-RUN cd build 
+RUN mkdir build && cd build 
 RUN cmake .. 
 RUN make
 RUN cd ./application
