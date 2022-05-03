@@ -13,12 +13,13 @@ RUN useradd -ms /bin/bash tp2022user
 USER tp2022user
 
 RUN cd /application
-RUN mkdir /build
+RUN mkdir -p ./application/build
 WORKDIR ./application/build
 RUN cd ./application/build
 RUN cmake ..
 RUN make
 RUN cd ./application
+
 RUN pip install flask argparse
 
 CMD python3 app.py --port 8898 --host "0.0.0.0"
