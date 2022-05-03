@@ -10,13 +10,18 @@ WORKDIR ./application
 EXPOSE 8898
 
 RUN useradd -ms /bin/bash tp2022user
-USER tp2022user
 
 RUN cd /application
-RUN mkdir build && cd build && cmake .. && make
+RUN mkdir build
+WORKDIR ./application/build
+RUN cd build 
+RUN cmake .. 
+RUN make
 RUN cd ./application
 
 RUN pip install flask argparse
+USER tp2022user
+
 
 CMD python3 app.py --port 8898 --host "0.0.0.0"
 
