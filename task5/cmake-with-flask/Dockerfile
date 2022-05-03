@@ -14,7 +14,7 @@ RUN useradd -ms /bin/bash tp2022user
 RUN cd /application
 RUN mkdir build
 WORKDIR ./application/build
-RUN cd build 
+RUN cd /application/build 
 RUN cmake .. 
 RUN make
 RUN cd ./application
